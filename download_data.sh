@@ -12,3 +12,4 @@ wget ftp://ftp.ensemblgenomes.org/pub/metazoa/release-48/fasta/drosophila_melano
 # 3.7 GB                                                      
 wget http://dgrp2.gnets.ncsu.edu/data/website/dgrp2.vcf
 
+wget https://raw.githubusercontent.com/pmitev/to-awk-or-not/master/docs/data/gaussian.out
