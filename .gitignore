@@ -1,3 +1,4 @@
 *.vcf
 *.gz
 coins.txt
+coins_with_tabs.txt
