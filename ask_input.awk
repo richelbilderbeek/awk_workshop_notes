@@ -1,4 +1,4 @@
-awk '
+#!/usr/bin/awk -f
     BEGIN {
         printf "enter filename: "
         getline < "-"
