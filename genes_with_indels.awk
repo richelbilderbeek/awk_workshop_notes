@@ -2,7 +2,8 @@
 #
 # Usage:
 #
-#   indels.vcf Drosophila_melanogaster.chr4.gff3
+#   ./genes_with_indels.awk indels.vcf Drosophila_melanogaster.chr4.gff3
+#
 BEGIN {
   if (ARGC != 3) {
     print "ERROR! Please call this script with two filenames:"
@@ -33,25 +34,22 @@ BEGIN {
 
 # First file, indels.vcf
 FNR==NR{
-    # Second column is the position
-    from_pos=$2
-    to_pos=$2+length($4)
-    print from_pos, to_pos
-    for (i = from_pos; i <= to_pos; ++i)
-    {
-      pos_has_hit[i] = "T";
-      print from_pos, to_pos, i
-    }
-    next
-    exit
+  # Second column is the position
+  from_pos=$2
+  to_pos=$2+length($4)
+  for (i = from_pos; i <= to_pos; ++i)
+  {
+    pos_has_hit[i] = "T";
+  }
 }
 
 FNR!=NR
 {
+    next
     hits=0;
     for(n=$4; n<=$5; ++n) {
         if (a[n] == "T") {
-            hits+=1
+            ++hits
         }
     }
     if (hits>0) {
