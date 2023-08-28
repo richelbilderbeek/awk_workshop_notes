@@ -4,6 +4,7 @@ My notes for an AWK workshop
  * [Workshop instructions](https://uppmax.uu.se/support-sv/courses-and-workshops/awk-workshop)
  * [To AWK or not](https://pmitev.github.io/to-awk-or-not/)
 
+Most clean/important file: [genes_with_indels.awk](genes_with_indels.awk)
 
 ```
 awk '$1 == "4" && $3 ~ /SNP/ { print $0 }' dgrp2_trimmed.vcf > snps.vcf

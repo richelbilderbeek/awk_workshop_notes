@@ -15,3 +15,6 @@ wget http://dgrp2.gnets.ncsu.edu/data/website/dgrp2.vcf
 awk '{print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9}' dgrp2.vcf > dgrp2_trimmed.vcf
 
 wget https://raw.githubusercontent.com/pmitev/to-awk-or-not/master/docs/data/gaussian.out
+
+wget ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+tar -xvf taxdump.tar.gz names.dmp
